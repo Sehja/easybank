@@ -1,0 +1,30 @@
+html {
+  font-size: 18px;
+  box-sizing: border-box;
+  color: $color-grayish-blue;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Public Sans',
+  sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  ::selection {
+    background-color: $color-bright-cyan;
+    color: $color-white;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 85%;
+}
