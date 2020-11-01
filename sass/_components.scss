@@ -1,6 +1,7 @@
 // buttons
 
 .btn {
+
     position: relative;
     padding: .8rem 1.5rem;
     border: none;
@@ -10,26 +11,47 @@
     font-weight: 700;
     letter-spacing: 1px;
     color: $color-white;
-    background-image: linear-gradient(to right, $color--lime-green, $color-bright-cyan);
+    background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
 
-    &:hover {
-        background-image: linear-gradient(to left, $color--lime-green, $color-bright-cyan);
-        ;
-    }
-
-    &::after {
+    &::before {
         content: "";
         position: absolute;
-        display: inline-block;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        background-color: #fff;
         border-radius: 20px;
-        background-color: #8cdef3;
-        transition: all .4s;
-        z-index: -1;
+        opacity: .3;
+        display: none;
     }
+
+    &:hover::before {
+        display: block;
+    }
+
+    
+
+   
+
+    // &:hover {
+    //     background-image: linear-gradient(to left, $color-lime-green, $color-bright-cyan);
+    //     ;
+    // }
+
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     display: inline-block;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     border-radius: 20px;
+    //     background-color: #8cdef3;
+    //     transition: all .4s;
+    //     z-index: -1;
+    // }
 
     &:hover::after {
         transform: scaleX(1.4) scaleY(1.6);
