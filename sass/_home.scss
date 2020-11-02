@@ -189,15 +189,19 @@
         justify-content: space-between;
         align-items: center;
         a {
-            -webkit-mask-image: url(/images/icon-facebook.svg);
-            mask-image: url(/images/icon-facebook.svg);
-            -webkit-mask-size: cover;
-            mask-size: cover ;
-            background-color: #fff;
-
-            &:hover {
-                background-color: $color-lime-green;
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 0.6rem;
             }
+        }
+    }
+
+    &__icon {
+        width: 1.2rem;
+        height: 1.2rem;
+        fill: #fff;
+        &:hover {
+            fill: $color-lime-green;
         }
     }
 

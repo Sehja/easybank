@@ -161,13 +161,15 @@ body {
     justify-content: space-between;
     align-items: center; }
     .footer__social a {
-      -webkit-mask-image: url(/images/icon-facebook.svg);
-      mask-image: url(/images/icon-facebook.svg);
-      -webkit-mask-size: cover;
-      mask-size: cover;
-      background-color: #fff; }
-      .footer__social a:hover {
-        background-color: #31d35c; }
+      display: inline-block; }
+      .footer__social a:not(:last-child) {
+        margin-right: 0.6rem; }
+  .footer__icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: #fff; }
+    .footer__icon:hover {
+      fill: #31d35c; }
   .footer__wrapper-1 {
     display: flex;
     flex-direction: column;
