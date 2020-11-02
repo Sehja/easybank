@@ -148,7 +148,7 @@
     
 
     &__text-box {
-        padding: 2rem 2rem;
+        padding: 2rem 1.2rem;
     }
 
     &__author {
@@ -157,10 +157,17 @@
     }
 
     &__subtitle {
-        color: $color-dark-blue;
         font-size: 1.1rem;
         font-weight: 400;
         margin-bottom: .6rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-dark-blue;
+        &:hover {
+            color: $color-lime-green;
+        }
     }
 }
 

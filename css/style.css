@@ -16,7 +16,7 @@ body {
   overflow-x: hidden;
   width: 100vw; }
   body ::selection {
-    background-color: #2bb7da;
+    background-color: #31d35c;
     color: #ffffff; }
 
 .container {
@@ -132,15 +132,19 @@ body {
       object-fit: cover;
       border-radius: 4px; }
   .articles__text-box {
-    padding: 2rem 2rem; }
+    padding: 2rem 1.2rem; }
   .articles__author {
     font-size: .7rem;
     margin-bottom: .6rem; }
   .articles__subtitle {
-    color: #2d314d;
     font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: .6rem; }
+  .articles__link {
+    text-decoration: none;
+    color: #2d314d; }
+    .articles__link:hover {
+      color: #31d35c; }
 
 .footer {
   padding: 2rem;
