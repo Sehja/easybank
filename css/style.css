@@ -3,6 +3,15 @@ html {
   box-sizing: border-box;
   color: #9698a6;
   overflow-x: hidden; }
+  @media only screen and (max-width: 1200px) {
+    html {
+      font-size: 16px; } }
+  @media only screen and (max-width: 950px) {
+    html {
+      font-size: 14px; } }
+  @media only screen and (max-width: 800px) {
+    html {
+      font-size: 13px; } }
 
 *,
 *::before,
@@ -42,23 +51,32 @@ body {
   display: flex;
   justify-content: space-between;
   width: 35%; }
+  @media only screen and (max-width: 900px) {
+    .header__list {
+      width: 50%; } }
 
 .header__link {
   text-decoration: none;
   color: inherit;
-  display: block; }
+  position: relative;
+  display: block;
+  position: relative; }
   .header__link::after {
     content: "";
+    width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -1.7rem;
     display: none;
     height: 3px;
-    width: 3.5rem;
     background-image: linear-gradient(to right, #31d35c, #2bb7da); }
   .header__link:hover {
     color: #2d314d; }
   .header__link:hover::after {
     display: block; }
+
+@media only screen and (max-width: 900px) {
+  .header .btn-header {
+    display: none; } }
 
 .header__bottom {
   position: relative;
@@ -70,14 +88,18 @@ body {
   background-size: cover;
   z-index: 2;
   background-color: #fafafa; }
+  @media only screen and (max-width: 900px) {
+    .header__bottom {
+      padding: 6rem 0; } }
   .header__bottom p {
     line-height: 1.5rem;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 900px) {
+      .header__bottom p {
+        margin-bottom: 7rem; } }
 
 .header__text {
   width: 45%; }
-  .header__text p {
-    width: 110%; }
 
 .header__title {
   color: #2d314d;
@@ -90,21 +112,48 @@ body {
   right: -5rem;
   top: -7rem;
   z-index: -1;
-  width: 50%; }
+  width: 50%;
+  height: 140%;
+  object-fit: contain; }
+  @media only screen and (max-width: 900px) {
+    .header__img {
+      width: 60%; } }
 
 .choose {
   padding: 8rem 0 3rem;
   background-color: #f3f4f6; }
+  @media only screen and (max-width: 950px) {
+    .choose {
+      padding: 5rem 0 1.5rem; } }
   .choose .paragraph {
     width: 50%;
     margin-bottom: 5rem;
     line-height: 1.5rem; }
+    @media only screen and (max-width: 900px) {
+      .choose .paragraph {
+        width: 100%;
+        text-align: center;
+        font-size: 1.3rem; } }
+  @media only screen and (max-width: 900px) {
+    .choose__block {
+      display: flex;
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
   .choose__wrapper {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 900px) {
+      .choose__wrapper {
+        display: block; } }
     .choose__wrapper .paragraph {
       width: 80%;
       line-height: 1.5rem; }
+      @media only screen and (max-width: 900px) {
+        .choose__wrapper .paragraph {
+          font-size: 1rem;
+          width: 50%; } }
   .choose .icon {
     display: block;
     margin-bottom: 2rem; }
@@ -116,6 +165,12 @@ body {
 .articles {
   padding: 8rem 2rem;
   background: #fafafa; }
+  @media only screen and (max-width: 950px) {
+    .articles {
+      padding: 5rem 0 1.5rem; } }
+  @media only screen and (max-width: 800px) {
+    .articles {
+      padding: 3rem 0; } }
   .articles h2 {
     margin-bottom: 3.5rem; }
   .articles__wrapper {
@@ -150,12 +205,12 @@ body {
 .footer {
   padding: 2.5rem;
   background-color: #2d314d; }
+  @media only screen and (max-width: 900px) {
+    .footer {
+      padding: 2.5rem 0; } }
   .footer .container {
     display: flex;
     align-items: flex-end; }
-  .footer__logo {
-    display: inline-block;
-    margin-bottom: 3rem; }
   .footer__social {
     display: flex; }
     .footer__social a {
@@ -163,6 +218,9 @@ body {
       align-items: flex-end; }
       .footer__social a:not(:last-child) {
         margin-right: 0.6rem; }
+    @media only screen and (max-width: 900px) {
+      .footer__social {
+        justify-content: space-between; } }
   .footer__icon {
     width: 1.2rem;
     height: 1.2rem;
@@ -172,18 +230,37 @@ body {
   .footer__wrapper-1 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start; }
+    justify-content: space-between;
+    height: 5rem;
+    width: 20%; }
+    @media only screen and (max-width: 900px) {
+      .footer__wrapper-1 {
+        height: 7rem; } }
   .footer__wrapper-2 {
     display: flex;
     width: 30%;
-    margin-left: 5rem; }
+    margin-left: 3rem; }
+    @media only screen and (max-width: 900px) {
+      .footer__wrapper-2 {
+        flex-grow: 1;
+        justify-content: center;
+        margin: 0; } }
   .footer__wrapper-3 {
     margin-left: auto;
     text-align: right; }
+    @media only screen and (max-width: 900px) {
+      .footer__wrapper-3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 7rem; } }
     .footer__wrapper-3 .btn {
       display: inline-block;
       margin-bottom: 2rem; }
+      @media only screen and (max-width: 900px) {
+        .footer__wrapper-3 .btn {
+          margin: 0; } }
     .footer__wrapper-3 small {
       display: block; }
   .footer__list {
@@ -193,7 +270,13 @@ body {
     display: flex;
     width: 100%; }
     .footer__list li:not(:last-child) {
-      margin-bottom: 0.8rem; }
+      margin-bottom: 1rem; }
+      @media only screen and (max-width: 900px) {
+        .footer__list li:not(:last-child) {
+          margin-bottom: 2rem; } }
+    @media only screen and (max-width: 900px) {
+      .footer__list {
+        width: 15rem; } }
   .footer__link {
     text-decoration: none;
     color: #fafafa; }
@@ -201,16 +284,20 @@ body {
       color: #31d35c; }
   .footer__list-1 {
     margin-right: 7rem; }
+  @media only screen and (max-width: 800px) {
+    .footer object {
+      margin-right: -2rem; } }
 
 .btn {
   position: relative;
-  padding: .8rem 1.5rem;
+  padding: .7rem 1.5rem;
   border: none;
-  border-radius: 20px;
+  border-radius: 4rem;
   outline: none;
   cursor: pointer;
   font-weight: 700;
-  letter-spacing: 1px;
+  font-size: .8rem;
+  line-height: 1rem;
   color: #ffffff;
   background-image: linear-gradient(to right, #31d35c, #2bb7da); }
   .btn::before {
@@ -235,6 +322,9 @@ body {
   color: #2d314d;
   font-weight: 300;
   margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 900px) {
+    .heading {
+      text-align: center; } }
 
 .paragraph-secondary {
   font-size: .8rem;

@@ -19,20 +19,24 @@
         display: flex;
         justify-content: space-between;
         width: 35%;
+
+        @media only screen and (max-width: 900px) {
+            width: 50%;
+        }
     }
     &__link {
         text-decoration: none;
         color: inherit;
-        // position: relative;
+        position: relative;
         display: block;
-
+        position: relative;
         &::after {
             content: "";
+            width: 100%;
             position: absolute;
-            bottom: 0;
+            bottom: -1.7rem;
             display: none;
             height: 3px;
-            width: 3.5rem;
             background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
         }
 
@@ -42,6 +46,11 @@
 
         &:hover::after {
             display: block;
+        }
+    }
+    .btn-header {
+        @media only screen and (max-width: 900px) {
+            display: none;
         }
     }
 
@@ -55,18 +64,20 @@
         background-size: cover;
         z-index: 2;
         background-color: $color-grey-light;
-        ;
+         @media only screen and (max-width: 900px) {
+             padding: 6rem 0;
+         }
 
         p {
             line-height: 1.5rem;
             margin-bottom: 2.5rem;
+            @media only screen and (max-width: 900px) {
+                margin-bottom: 7rem;
+            }
         }
     }
     &__text {
         width: 45%;
-        p {
-            width: 110%;
-        }
     }
     &__title {
         color: $color-dark-blue;
@@ -80,24 +91,60 @@
         top: -7rem;
         z-index: -1;
         width: 50%;
+        height: 140%;
+        object-fit: contain;
+
+        @media only screen and (max-width: 900px) {
+           width: 60%;
+        }
     }
 }
 
 .choose {
     padding: 8rem 0 3rem;
     background-color: $color-grayish-light-blue;
+
+    @media only screen and (max-width: 950px) {
+        padding: 5rem 0 1.5rem;
+    }
     .paragraph {
         width: 50%;
         margin-bottom: 5rem;
         line-height: 1.5rem;
+
+        @media only screen and (max-width: 900px) {
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__block {
+
+        @media only screen and (max-width: 900px) {
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__wrapper {
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: 900px) {
+            display: block;
+        }
         .paragraph {
             width: 80%;
             line-height: 1.5rem;
+
+            @media only screen and (max-width: 900px) {
+                font-size: 1rem;
+                width: 50%;
+            }
         }
     }
 
@@ -123,6 +170,14 @@
 .articles {
     padding: 8rem 2rem;
     background: $color-grey-light;
+
+    @media only screen and (max-width: 950px) {
+        padding: 5rem 0 1.5rem;
+    }
+
+    @media only screen and (max-width: 800px) {
+        padding: 3rem 0;
+    }
 
     h2 {
         margin-bottom: 3.5rem;
@@ -179,15 +234,15 @@
 .footer {
     padding: 2.5rem;
     background-color: $color-dark-blue;
+
+    @media only screen and (max-width: 900px) {
+        padding: 2.5rem 0;
+    }
     .container {
         display: flex;
         align-items: flex-end;
     }
-    &__logo {
-        display: inline-block;
-        margin-bottom: 3rem;
-    }
-
+    
     &__social {
         display: flex;
         
@@ -197,6 +252,10 @@
             &:not(:last-child) {
                 margin-right: 0.6rem;
             }
+        }
+
+        @media only screen and (max-width: 900px) {
+            justify-content: space-between;
         }
     }
 
@@ -212,23 +271,48 @@
     &__wrapper-1 {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: start;
+        justify-content: space-between;
+        height: 5rem;
+        width: 20%;
+
+        @media only screen and (max-width: 900px) {
+            height: 7rem;
+        }
     }
 
     &__wrapper-2 {
         display: flex;
         width: 30%;
-        margin-left: 5rem;
+        margin-left: 3rem;
+
+        @media only screen and (max-width: 900px) {
+            flex-grow: 1;
+            justify-content: center;
+            margin: 0;
+        }
     }
 
     &__wrapper-3 {
         margin-left: auto;
         text-align: right;
+
+        @media only screen and (max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 7rem;
+        }
+
         .btn {
             display: inline-block;
             margin-bottom: 2rem;
+
+            @media only screen and (max-width: 900px) {
+                margin: 0;
+            }
         }
+
         small {
             display: block;
         }
@@ -241,7 +325,14 @@
         display: flex;
         width: 100%;
         li:not(:last-child) {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
+            @media only screen and (max-width: 900px) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            width: 15rem;
         }
     }
 
@@ -254,5 +345,11 @@
     }
     &__list-1 {
         margin-right: 7rem;
+    }
+
+    object {
+        @media only screen and (max-width: 800px) {
+            margin-right: -2rem;
+        }
     }
 }
