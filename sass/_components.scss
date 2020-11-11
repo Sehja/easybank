@@ -1,4 +1,3 @@
-// buttons
 
 .btn {
 
@@ -13,6 +12,14 @@
     line-height: 1rem;
     color: $color-white;
     background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
+    &:hover {
+        background-image: linear-gradient(to left, $color-lime-green, $color-bright-cyan);
+    }
+    @media only screen and (max-width: 700px) {
+        &:hover {
+            background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
+        }
+    }
 
     &::before {
         content: "";
@@ -26,38 +33,20 @@
         opacity: .3;
         display: none;
     }
-
     &:hover::before {
         display: block;
     }
 
-    
-
-   
-
-    // &:hover {
-    //     background-image: linear-gradient(to left, $color-lime-green, $color-bright-cyan);
-    //     ;
-    // }
-
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     display: inline-block;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     border-radius: 20px;
-    //     background-color: #8cdef3;
-    //     transition: all .4s;
-    //     z-index: -1;
-    // }
-
-    &:hover::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
+    @media only screen and (max-width: 700px) {
+        &:hover::before {
+            display: none;
+        }
     }
+
+    // &:hover::after {
+    //     transform: scaleX(1.4) scaleY(1.6);
+    //     opacity: 0;
+    // }
 }
 
 //  Heading
