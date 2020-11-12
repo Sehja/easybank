@@ -147,20 +147,9 @@
         }
     }
 
-    &__block {
-
-        @media only screen and (max-width: 900px) {
-            display: flex;
-            margin: 0 auto;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
     &__wrapper {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
 
         @media only screen and (max-width: 900px) {
             display: block;
@@ -173,6 +162,15 @@
                 font-size: 1rem;
                 width: 50%;
             }
+        }
+    }
+    &__block {
+        @media only screen and (max-width: 900px) {
+            display: flex;
+            margin: 0 auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
 
