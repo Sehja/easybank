@@ -19,6 +19,8 @@
         &:hover {
             background-image: linear-gradient(to right, $color-lime-green, $color-bright-cyan);
         }
+        padding: 2rem 4rem;
+        font-size: 1.8rem;
     }
 
     &::before {
@@ -33,7 +35,8 @@
         opacity: .3;
         display: none;
     }
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
         display: block;
     }
 
